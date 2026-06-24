@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio de Diseño</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica', sans-serif; }
+        body { background-color: #0f0f11; color: #fff; padding: 2rem; }
+        
+        header { text-align: center; margin-bottom: 3rem; }
+        header h1 { font-size: 2.5rem; letter-spacing: -1px; }
+        header p { color: #888; margin-top: 0.5rem; }
+
+        /* Filtros */
+        .filters { display: flex; justify-content: center; gap: 10px; margin-bottom: 2rem; list-style: none; }
+        .filters button { background: #222; border: none; color: #fff; padding: 10px 20px; border-radius: 20px; cursor: pointer; transition: 0.3s; }
+        .filters button:hover, .filters button.active { background: #ff3e6c; }
+
+        /* Galería Grid */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .project-card { background: #1a1a1e; border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 16/9; }
+        .project-card img, .project-card video { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Efecto Hover */
+        .project-info { position: absolute; inset: 0; background: rgba(0,0,0,0.8); display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: 0.3s; }
+        .project-card:hover .project-info { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tu Nombre</h1>
+        <p>Graphic Designer & Visual Artist</p>
+    </header>
+
+    <!-- Filtros sugeridos -->
+    <div class="filters">
+        <button class="active">Todos</button>
+        <button>Branding</button>
+        <button>Social Media</button>
+        <button>Fotografía</button>
+        <button>Motion</button>
+    </div>
+
+    <!-- Contenedor de proyectos -->
+    <main class="portfolio-grid">
+        <div class="project-card">
+            <!-- Aquí iría la imagen o miniatura de video -->
+            <div style="background: #333; width:100%; height:100%;"></div> 
+            <div class="project-info">
+                <h3>Nombre del Proyecto</h3>
+                <p>Branding / Identidad</p>
+            </div>
+        </div>
+        <!-- Repetir tarjetas para más proyectos -->
+    </main>
+
+</body>
+</html>
